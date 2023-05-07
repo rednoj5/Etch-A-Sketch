@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: blanchedalmond;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.board {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    max-width: 600px;
+    max-height: 600px;
+    border: 1px solid red;
+    flex-flow: column;
+}
+
+.row {
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    flex-grow: 1;
+}
+
+.cell {
+    border: 1px dotted yellow;
+    flex-grow: 1;
+}
