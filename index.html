@@ -14,7 +14,30 @@
     </header>
     <main class="main">
         <div class="board"></div>
-        <div class="settings"></div>
+        <div class="settings">
+            <button type='button' id="clearGrid">Clear Grid</button>
+            <div class="modeChange">
+                <p id="rgbButtonDescription">RGB Mode</p>
+                <label class="toggle">
+                    <input id='rgbButton' type="checkbox" name="toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="modeChange">
+                <p id="shadingButtonDescription">Shading Mode</p>
+                <label class="toggle">
+                    <input id='shadingButton' type="checkbox" name="toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="modeChange">
+                <p id="eraseButtonDescription">Erase Mode</p>
+                <label class="toggle">
+                    <input id='eraseButton' type="checkbox" name="toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
     </main>
     <div class="gridSizeSelection">
         <label for='slider'>Choose grid size:</label>
@@ -22,7 +45,7 @@
         <p id="gridSizeOutput">16 x 16</p>
     </div>
     <footer>
-
+        <p>Created by Rednoj5</p><a href="https://github.com/rednoj5" target="_blank" rel="noopener noreferrer"><img id='gitLogo' src="github-mark.png" /></a></a>
     </footer>
 </body>
 </html>
