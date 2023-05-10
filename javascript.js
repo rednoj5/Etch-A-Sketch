@@ -8,6 +8,7 @@ const clearButton = document.querySelector('#clearGrid');
 const rgbButton = document.querySelector('#rgbButton');
 const shadingButton = document.querySelector('#shadingButton');
 const eraseButton = document.querySelector('#eraseButton');
+const colorButton = document.querySelector('#colorChange');
 
 //functions
 
@@ -29,6 +30,8 @@ function clearBoard() {
     board.innerHTML = '';
 };
 
+//below function shoud be split into smaller ones. I know...
+
 function changeColor(e) {
     if (mouseDown === true) {
         if (rgbButton.checked) {
@@ -36,18 +39,17 @@ function changeColor(e) {
         } else if (shadingButton.checked) {
             let currentOpacity = parseFloat(getComputedStyle(e.target).opacity);
             let currentBackground = getComputedStyle(e.target).backgroundColor;
-            console.log(currentBackground);
             if (currentOpacity > 0 && currentOpacity != 1) {
-                e.target.style.cssText = `background-color: black; opacity: ${currentOpacity + 0.1}`
+                e.target.style.cssText = `background-color: #000000; opacity: ${currentOpacity + 0.1}`
             } else if (currentOpacity == 1 && currentBackground == 'rgb(0, 0, 0)') {
                 return
             } else {
-                e.target.style.cssText = 'background-color: black; opacity: 0.1;';
+                e.target.style.cssText = 'background-color: #000000; opacity: 0.1;';
             };
         } else if (eraseButton.checked) {
             e.target.style.cssText = 'background-color: ;'
         } else {
-            e.target.style.cssText = 'background-color: black;';
+            e.target.style.cssText = `background-color: ${colorButton.value};`;
     }};
 };
 
